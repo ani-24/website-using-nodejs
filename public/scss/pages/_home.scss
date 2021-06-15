@@ -1,0 +1,7 @@
+@use "./../variables/" as *;
+
+.hero-section {
+  height: 80vh;
+  width: 100%;
+  background: map-get($map: $dark, $key: "one");
+}

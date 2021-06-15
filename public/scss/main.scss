@@ -1,5 +1,14 @@
+// vendors
+// @use "./vendors/" as *;
+
 // variables
-@use "./variables/";
+@use "./variables/" as *;
+
+// components
+@use "./components/" as *;
+
+// pages
+@use "./pages/" as *;
 
 *,
 *::before,

@@ -1,0 +1,32 @@
+@use "../variables/" as *;
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 1em 0;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-areas: ". logo list .";
+  .logo {
+    grid-area: logo;
+    font-size: 3rem;
+    a {
+      font-family: $delagothic;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  .nav-list {
+    grid-area: list;
+    justify-self: end;
+    display: flex;
+    list-style: none;
+    align-self: center;
+    .nav-item {
+      margin: 0 1em;
+      .nav-link {
+        color: #a8a8a8;
+        text-decoration: none;
+      }
+    }
+  }
+}
