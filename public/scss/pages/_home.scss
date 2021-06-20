@@ -1,7 +1,27 @@
 @use "./../variables/" as *;
+@use "./../mixins/" as *;
 
 .hero-section {
   height: 80vh;
   width: 100%;
-  background: map-get($map: $dark, $key: "one");
+  background: $light;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  .hero-text {
+    align-self: center;
+    .hero-header {
+      font-family: $montserrat;
+      font-weight: 800;
+      font-size: 3rem;
+      @include map-get-val(color, $dark, 2);
+      margin-bottom: 30px;
+    }
+    .hero-desc {
+      margin-bottom: 30px;
+    }
+  }
+  img {
+    height: 100%;
+  }
 }

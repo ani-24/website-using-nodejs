@@ -1,0 +1,17 @@
+@use "./../variables/" as *;
+@use "./../mixins/" as *;
+
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border-radius: 2em;
+}
+
+.btn-dark {
+  @include btn(map-get($map: $dark, $key: 1), $light);
+}

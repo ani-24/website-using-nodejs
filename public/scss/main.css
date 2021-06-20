@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap");
 .navbar {
   position: fixed;
   width: 100%;
@@ -16,7 +17,7 @@
 .navbar .logo a {
   font-family: "Dela Gothic One", cursive;
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 .navbar .nav-list {
   grid-area: list;
@@ -31,14 +32,59 @@
   margin: 0 1em;
 }
 .navbar .nav-list .nav-item .nav-link {
-  color: #a8a8a8;
+  color: #111;
+  font-weight: 300;
   text-decoration: none;
+}
+
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border-radius: 2em;
+}
+
+.btn-dark {
+  border: 1px solid #111;
+  color: #111;
+}
+.btn-dark:hover {
+  background: #111;
+  color: #f7f7f7;
 }
 
 .hero-section {
   height: 80vh;
   width: 100%;
-  background: #111;
+  background: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10%;
+}
+.hero-section .hero-text {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.hero-section .hero-text .hero-header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #222;
+  margin-bottom: 30px;
+}
+.hero-section .hero-text .hero-desc {
+  margin-bottom: 30px;
+}
+.hero-section img {
+  height: 100%;
 }
 
 *,

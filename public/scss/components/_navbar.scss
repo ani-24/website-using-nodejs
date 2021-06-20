@@ -1,4 +1,5 @@
 @use "../variables/" as *;
+@use "../mixins/" as *;
 .navbar {
   position: fixed;
   width: 100%;
@@ -12,7 +13,7 @@
     a {
       font-family: $delagothic;
       text-decoration: none;
-      color: #fff;
+      color: map-get($map: $dark, $key: 0);
     }
   }
   .nav-list {
@@ -24,7 +25,8 @@
     .nav-item {
       margin: 0 1em;
       .nav-link {
-        color: #a8a8a8;
+        @include map-get-val(color, $dark, 1);
+        font-weight: 300;
         text-decoration: none;
       }
     }
