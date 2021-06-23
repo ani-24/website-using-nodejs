@@ -10,6 +10,7 @@
   padding: 0.5em 1em;
   display: inline-block;
   border-radius: 2em;
+  transition: background 150ms ease-in-out, color 150ms ease-in-out;
 }
 
 .btn-dark {

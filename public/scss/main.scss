@@ -10,6 +10,9 @@
 // pages
 @use "./pages/" as *;
 
+// abstracts
+@use "./abstracts/" as *;
+
 *,
 *::before,
 *::after {
@@ -20,4 +23,16 @@
 
 body {
   font-family: $poppins;
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
 }

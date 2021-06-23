@@ -1,14 +1,23 @@
 @use "./../variables/" as *;
 @use "./../mixins/" as *;
 
+.navbar {
+  background: $light;
+}
+
 .hero-section {
+  position: relative;
   height: 80vh;
   width: 100%;
   background: $light;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 10%;
+  overflow: visible;
+  z-index: 2;
   .hero-text {
+    width: 50%;
     align-self: center;
     .hero-header {
       font-family: $montserrat;
@@ -21,7 +30,35 @@
       margin-bottom: 30px;
     }
   }
-  img {
-    height: 100%;
+  .hero-img {
+    width: 50%;
+    align-self: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 20%;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    .hero-text,
+    .hero-img {
+      width: 100%;
+      text-align: center;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 427px) {
+  .hero-section {
+    .hero-img {
+      display: none;
+    }
   }
 }
