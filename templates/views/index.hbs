@@ -4,8 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./scss/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    {{>links}}
   </head>
   <body>
     {{>navbar}}
@@ -21,8 +20,22 @@
         <img src="./img/web_development.svg" alt="Web Development">
       </div>
     </div>
-
-    {{!-- Custom JavaScript files --}}
-    <script src="./js/main.js"></script>
+    <section id="courses">
+      <h1 class="section-title">Recommended courses</h1>
+      <div class="course-container">
+        <div class="card">
+          <div class="card-img">
+            <img src="" alt="">
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Card Title</h2>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit a blanditiis iste quisquam alias repellendus cumque dolorum omnis officia ipsum.
+            </p>
+            <a href="#" class="card-link btn btn-dark">Go To Course</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

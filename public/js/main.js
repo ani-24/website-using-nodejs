@@ -16,3 +16,7 @@ hamburger.addEventListener("click", () => {
     document.body.removeChild(overlay);
   });
 });
+
+const coures = require("./coursedet");
+
+const courseContainer = document.querySelector(".course-container");
