@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&display=swap");
 .navbar {
   position: relative;
   width: 100%;
@@ -97,6 +98,7 @@
           align-items: center;
   display: none;
   grid-area: menuicon;
+  cursor: pointer;
 }
 .navbar .hamburger_menu .bar {
   width: 100%;
@@ -145,6 +147,33 @@
 .btn-dark:hover {
   background: #111;
   color: #f7f7f7;
+}
+
+.card {
+  width: 20rem;
+  background: #f7f7f7;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.card .card-img {
+  width: 100%;
+}
+.card .card-img img {
+  width: 100%;
+}
+.card .card-body {
+  padding: 1em;
+}
+.card .card-body .card-title {
+  font-family: "Big Shoulders Stencil Display", cursive;
+  font-weight: 800;
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+}
+.card .card-body .card-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-bottom: 25px;
 }
 
 .navbar {
@@ -217,10 +246,35 @@
     display: none;
   }
 }
+section {
+  min-height: 60vh;
+  padding: 100px 0;
+}
+section .section-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+#course .course-container {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 ::-moz-selection {
   background: #111;
   color: #f7f7f7;
 }
+
 ::selection {
   background: #111;
   color: #f7f7f7;

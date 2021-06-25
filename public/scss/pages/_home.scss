@@ -62,3 +62,25 @@
     }
   }
 }
+
+section {
+  min-height: 60vh;
+  padding: 100px 0;
+  .section-title {
+    text-align: center;
+    // font-family: $montserrat;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+}
+
+#course {
+  .course-container {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
