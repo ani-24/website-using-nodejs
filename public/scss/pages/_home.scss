@@ -76,6 +76,7 @@ section {
 
 #course {
   position: relative;
+  overflow: hidden;
   &::before {
     content: "";
     position: absolute;
@@ -83,9 +84,10 @@ section {
     right: 0;
     height: 20rem;
     width: 20rem;
-    background: $light;
+    background: $orange;
     border-radius: 50%;
     transform: translate(50%, -50%);
+    pointer-events: none;
   }
   .course-container {
     margin: 0 auto;

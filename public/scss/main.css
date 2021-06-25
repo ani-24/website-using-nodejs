@@ -295,6 +295,7 @@ section .section-title {
 
 #course {
   position: relative;
+  overflow: hidden;
 }
 #course::before {
   content: "";
@@ -303,10 +304,11 @@ section .section-title {
   right: 0;
   height: 20rem;
   width: 20rem;
-  background: #f7f7f7;
+  background: #fe7a6e;
   border-radius: 50%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
+  pointer-events: none;
 }
 #course .course-container {
   margin: 0 auto;
