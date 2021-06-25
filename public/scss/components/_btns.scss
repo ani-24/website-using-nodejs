@@ -11,8 +11,25 @@
   display: inline-block;
   border-radius: 2em;
   transition: background 150ms ease-in-out, color 150ms ease-in-out;
+  .btn-icon {
+    transition: margin-left 150ms ease-in-out;
+  }
+  &:hover {
+    .btn-icon {
+      margin-left: 5px;
+    }
+  }
 }
 
 .btn-dark {
-  @include btn(map-get($map: $dark, $key: 1), $light);
+  @include btn-outline(map-get($map: $dark, $key: 1), $light);
+}
+
+.btn-dark-secondary {
+  border-radius: 5px;
+  @include btn-secondary(
+    map-get($map: $dark, $key: 1),
+    map-get($map: $dark, $key: 3),
+    $light
+  );
 }

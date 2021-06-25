@@ -38,7 +38,7 @@ courses.forEach((course) => {
     <p class="card-text">
       ${course.text}
     </p>
-    <a href="${course.link}" class="card-link btn btn-dark">Go to the Course <i class="fas fa-external-link-alt"></i></a>
+    <a href="${course.link}" class="card-link btn btn-dark">Go to the Course <i class="fas fa-external-link-alt btn-icon"></i></a>
   </div>
   `;
   courseContainer.appendChild(card);

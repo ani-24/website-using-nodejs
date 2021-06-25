@@ -1,0 +1,10 @@
+@use "./../variables/" as *;
+
+footer {
+  width: 100%;
+  background: map-get($map: $dark, $key: 1);
+  color: $light;
+  font-family: $montserrat;
+  font-weight: 300;
+  padding: 2em 0;
+}

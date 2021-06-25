@@ -1,8 +1,16 @@
-@mixin btn($clr1, $clr2) {
+@mixin btn-outline($clr1, $clr2) {
   border: 1px solid $clr1;
   color: $clr1;
   &:hover {
     background: $clr1;
     color: $clr2;
+  }
+}
+
+@mixin btn-secondary($clr1, $clr2, $clr3) {
+  background: $clr1;
+  color: $clr3;
+  &:hover {
+    background: $clr2;
   }
 }

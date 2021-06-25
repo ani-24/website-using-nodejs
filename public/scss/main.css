@@ -139,6 +139,13 @@
   -webkit-transition: background 150ms ease-in-out, color 150ms ease-in-out;
   transition: background 150ms ease-in-out, color 150ms ease-in-out;
 }
+.btn .btn-icon {
+  -webkit-transition: margin-left 150ms ease-in-out;
+  transition: margin-left 150ms ease-in-out;
+}
+.btn:hover .btn-icon {
+  margin-left: 5px;
+}
 
 .btn-dark {
   border: 1px solid #111;
@@ -147,6 +154,15 @@
 .btn-dark:hover {
   background: #111;
   color: #f7f7f7;
+}
+
+.btn-dark-secondary {
+  border-radius: 5px;
+  background: #111;
+  color: #f7f7f7;
+}
+.btn-dark-secondary:hover {
+  background: #333;
 }
 
 .card {
@@ -174,6 +190,27 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   margin-bottom: 25px;
+}
+
+footer {
+  width: 100%;
+  background: #111;
+  color: #f7f7f7;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  padding: 2em 0;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar {
@@ -248,7 +285,7 @@
 }
 section {
   min-height: 60vh;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 section .section-title {
   text-align: center;
@@ -256,9 +293,24 @@ section .section-title {
   font-size: 2rem;
 }
 
+#course {
+  position: relative;
+}
+#course::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20rem;
+  width: 20rem;
+  background: #f7f7f7;
+  border-radius: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
 #course .course-container {
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,14 +321,17 @@ section .section-title {
       -ms-flex-align: center;
           align-items: center;
 }
+#course .wrapper {
+  margin-top: 50px;
+}
 
 ::-moz-selection {
-  background: #111;
+  background: #222;
   color: #f7f7f7;
 }
 
 ::selection {
-  background: #111;
+  background: #222;
   color: #f7f7f7;
 }
 

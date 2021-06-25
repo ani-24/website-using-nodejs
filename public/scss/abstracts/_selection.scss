@@ -1,6 +1,6 @@
 @use "./../variables/" as *;
 
 ::selection {
-  background: map-get($map: $dark, $key: 1);
+  background: map-get($map: $dark, $key: 2);
   color: $light;
 }
