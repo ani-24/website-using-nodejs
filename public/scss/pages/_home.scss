@@ -88,6 +88,7 @@ section {
     border-radius: 50%;
     transform: translate(50%, -50%);
     pointer-events: none;
+    z-index: -1;
   }
   .course-container {
     margin: 0 auto;
@@ -96,6 +97,10 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    .card {
+      margin-bottom: 30px;
+    }
   }
   .wrapper {
     margin-top: 50px;
