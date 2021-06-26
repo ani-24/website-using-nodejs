@@ -1,0 +1,36 @@
+@use "./../variables/" as *;
+
+.container {
+  margin-top: 6rem;
+  form {
+    .input-field {
+      position: relative;
+      min-height: 50px;
+      width: 100%;
+      background: $light;
+      border-radius: 5px;
+      overflow: hidden;
+      .form-input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 25px;
+      }
+      &.textarea-field {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 5px;
+        background: $orange;
+      }
+    }
+  }
+}

@@ -25,4 +25,11 @@
       margin-bottom: 25px;
     }
   }
+  &:hover {
+    .card-body {
+      .card-title {
+        color: $orange;
+      }
+    }
+  }
 }

@@ -1,0 +1,41 @@
+@use "./../variables/" as *;
+
+.search-area {
+  width: 80%;
+  height: 50px;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  .searchbar {
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 25px;
+  }
+  .search-icon {
+    float: right;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+    background: map-get($map: $white, $key: 1);
+    &:hover {
+      background: map-get($map: $white, $key: 2);
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .search-area {
+    .searchbar {
+      width: 80%;
+    }
+    .search-icon {
+      width: 20%;
+    }
+  }
+}

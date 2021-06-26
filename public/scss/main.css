@@ -191,6 +191,9 @@
   font-weight: 500;
   margin-bottom: 25px;
 }
+.card:hover .card-body .card-title {
+  color: #fe7a6e;
+}
 
 footer {
   width: 100%;
@@ -199,6 +202,7 @@ footer {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   padding: 2em 0;
+  margin-top: 1em;
 }
 
 .wrapper {
@@ -213,19 +217,38 @@ footer {
           align-items: center;
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.course-container {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.course-container .card {
+  margin-bottom: 30px;
+}
+
 .grid {
   display: grid;
 }
 .grid.grid-2 {
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px 30px;
 }
 
-@media (max-width: 426px) {
-  .grid.grid-2 {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
 .navbar {
   background: #f7f7f7;
 }
@@ -324,26 +347,86 @@ section .section-title {
   pointer-events: none;
   z-index: -1;
 }
-#course .course-container {
-  margin: 0 auto;
+#course .wrapper {
   margin-top: 50px;
+}
+
+.search-area {
   width: 80%;
+  height: 50px;
+  margin: auto;
+  margin-top: 100px;
+  -webkit-box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+.search-area .searchbar {
+  width: 90%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 25px;
+}
+.search-area .search-icon {
+  float: right;
+  height: 100%;
+  width: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  cursor: pointer;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  background: #eee;
 }
-#course .course-container .card {
-  margin-bottom: 30px;
+.search-area .search-icon:hover {
+  background: #ddd;
 }
-#course .wrapper {
-  margin-top: 50px;
+
+@media (max-width: 426px) {
+  .search-area .searchbar {
+    width: 80%;
+  }
+  .search-area .search-icon {
+    width: 20%;
+  }
+}
+.container {
+  margin-top: 6rem;
+}
+.container form .input-field {
+  position: relative;
+  min-height: 50px;
+  width: 100%;
+  background: #f7f7f7;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.container form .input-field .form-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 25px;
+}
+.container form .input-field.textarea-field {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.container form .input-field::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: #fe7a6e;
 }
 
 ::-moz-selection {
@@ -367,6 +450,14 @@ section .section-title {
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+input {
+  font-family: inherit;
+}
+
+button {
+  font-family: inherit;
 }
 
 @media (min-width: 2560px) {

@@ -25,6 +25,14 @@ body {
   font-family: $poppins;
 }
 
+input {
+  font-family: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
 @media (min-width: 2560px) {
   html {
     font-size: 30px;

@@ -1,0 +1,17 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.course-container {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  .card {
+    margin-bottom: 30px;
+  }
+}
