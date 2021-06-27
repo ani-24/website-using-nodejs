@@ -4,36 +4,40 @@
   margin-top: 6rem;
   form {
     text-align: center;
-    .input-field {
-      position: relative;
-      min-height: 50px;
-      background: $light;
-      border-radius: 5px;
-      overflow: hidden;
-      .form-input {
-        height: 100%;
-        width: 100%;
-        border: none;
-        outline: none;
-        background: transparent;
-        padding: 25px;
-      }
-      &.textarea-field {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        textarea {
+    .grid {
+      grid-area: "item-1 item-2" "item-1 item-2" "item-3 item-4" "item-3 item-4"
+        "item5 item-5" "item5 item-5";
+      .input-field {
+        position: relative;
+        min-height: 50px;
+        background: $light;
+        border-radius: 5px;
+        overflow: hidden;
+        .form-input {
+          height: 100%;
           width: 100%;
-          resize: vertical;
+          border: none;
+          outline: none;
+          background: transparent;
+          padding: 25px;
         }
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 5px;
-        background: $orange;
+        &.textarea-field {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          textarea {
+            width: 100%;
+            resize: vertical;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 5px;
+          background: $orange;
+        }
       }
     }
     .submit {
@@ -69,14 +73,23 @@
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    form {
-      .input-field {
-        &:not(textarea) {
-          height: 30px;
-        }
-      }
+// @media (max-width: 768px) {
+//   .container {
+//     form {
+//       .input-field {
+//         &:not(textarea) {
+//           height: 30px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 426px) {
+  form {
+    .grid {
+      grid-area: "item-1 item-1", "item-2 item-2", "item-3 item-3",
+        "item-4 item-4", "item-5 item-5";
     }
   }
 }

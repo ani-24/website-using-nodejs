@@ -246,7 +246,23 @@ footer {
 }
 .grid.grid-2 {
   grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 30px 30px;
+}
+.grid .grid-item-1 {
+  grid-area: item-1;
+}
+.grid .grid-item-2 {
+  grid-area: item-2;
+}
+.grid .grid-item-3 {
+  grid-area: item-3;
+}
+.grid .grid-item-4 {
+  grid-area: item-4;
+}
+.grid .grid-item-5 {
+  grid-area: item-5;
 }
 
 .navbar {
@@ -402,14 +418,17 @@ section .section-title {
 .container form {
   text-align: center;
 }
-.container form .input-field {
+.container form .grid {
+  grid-area: "item-1 item-2" "item-1 item-2" "item-3 item-4" "item-3 item-4" "item5 item-5" "item5 item-5";
+}
+.container form .grid .input-field {
   position: relative;
   min-height: 50px;
   background: #f7f7f7;
   border-radius: 5px;
   overflow: hidden;
 }
-.container form .input-field .form-input {
+.container form .grid .input-field .form-input {
   height: 100%;
   width: 100%;
   border: none;
@@ -417,15 +436,15 @@ section .section-title {
   background: transparent;
   padding: 25px;
 }
-.container form .input-field.textarea-field {
+.container form .grid .input-field.textarea-field {
   grid-column-start: 1;
   grid-column-end: 3;
 }
-.container form .input-field.textarea-field textarea {
+.container form .grid .input-field.textarea-field textarea {
   width: 100%;
   resize: vertical;
 }
-.container form .input-field::before {
+.container form .grid .input-field::before {
   content: "";
   position: absolute;
   left: 0;
@@ -467,9 +486,9 @@ section .section-title {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .container form .input-field:not(textarea) {
-    height: 30px;
+@media (max-width: 426px) {
+  form .grid {
+    grid-area: "item-1 item-1", "item-2 item-2", "item-3 item-3", "item-4 item-4", "item-5 item-5";
   }
 }
 ::-moz-selection {
