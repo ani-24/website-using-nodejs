@@ -3,10 +3,10 @@
 .container {
   margin-top: 6rem;
   form {
+    text-align: center;
     .input-field {
       position: relative;
       min-height: 50px;
-      width: 100%;
       background: $light;
       border-radius: 5px;
       overflow: hidden;
@@ -21,6 +21,10 @@
       &.textarea-field {
         grid-column-start: 1;
         grid-column-end: 3;
+        textarea {
+          width: 100%;
+          resize: vertical;
+        }
       }
       &::before {
         content: "";
@@ -30,6 +34,48 @@
         height: 100%;
         width: 5px;
         background: $orange;
+      }
+    }
+    .submit {
+      position: relative;
+      background: $light;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 0.5em 1em;
+      margin-top: 30px;
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 2;
+      transition: color 200ms ease-in-out;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 5px;
+        background: $orange;
+        z-index: -1;
+        transition: width 200ms ease-out;
+      }
+      &:hover {
+        color: map-get($map: $white, $key: 1);
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    form {
+      .input-field {
+        &:not(textarea) {
+          height: 30px;
+        }
       }
     }
   }

@@ -10,22 +10,25 @@
 <body>
   {{>navbar}}
   <div class="container">
-    <form action="/contact" method="post" class="form grid grid-2">
-      <div class="input-field">
-        <input type="text" class="form-input" placeholder="First Name:">
+    <form action="/contact" method="post" class="form">
+      <div class="grid grid-2">
+        <div class="input-field">
+          <input type="text" class="form-input" placeholder="First Name:">
+        </div>
+        <div class="input-field">
+          <input type="text" class="form-input" placeholder="Last Name (optional):">
+        </div>
+        <div class="input-field">
+          <input type="text" class="form-input" placeholder="Mobile (optional):">
+        </div>
+        <div class="input-field">
+          <input type="text" class="form-input" placeholder="Email:">
+        </div>
+        <div class="input-field textarea-field">
+          <textarea name="message" id="message" rows="10" class="form-input" placeholder="Message:"></textarea>
+        </div>
       </div>
-      <div class="input-field">
-        <input type="text" class="form-input" placeholder="Last Name (optional):">
-      </div>
-      <div class="input-field">
-        <input type="text" class="form-input" placeholder="Mobile (optional):">
-      </div>
-      <div class="input-field">
-        <input type="text" class="form-input" placeholder="Email:">
-      </div>
-      <div class="input-field textarea-field">
-        <textarea name="message" id="message" rows="10" class="form-input" placeholder="Message:"></textarea>
-      </div>
+      <button class="submit" type="submit">Send</button>
     </form>
   </div>
 </body>

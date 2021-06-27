@@ -399,10 +399,12 @@ section .section-title {
 .container {
   margin-top: 6rem;
 }
+.container form {
+  text-align: center;
+}
 .container form .input-field {
   position: relative;
   min-height: 50px;
-  width: 100%;
   background: #f7f7f7;
   border-radius: 5px;
   overflow: hidden;
@@ -419,6 +421,10 @@ section .section-title {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+.container form .input-field.textarea-field textarea {
+  width: 100%;
+  resize: vertical;
+}
 .container form .input-field::before {
   content: "";
   position: absolute;
@@ -428,12 +434,48 @@ section .section-title {
   width: 5px;
   background: #fe7a6e;
 }
+.container form .submit {
+  position: relative;
+  background: #f7f7f7;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  margin-top: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 2;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+.container form .submit::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: #fe7a6e;
+  z-index: -1;
+  -webkit-transition: width 200ms ease-out;
+  transition: width 200ms ease-out;
+}
+.container form .submit:hover {
+  color: #eee;
+}
+.container form .submit:hover::before {
+  width: 100%;
+}
 
+@media (max-width: 768px) {
+  .container form .input-field:not(textarea) {
+    height: 30px;
+  }
+}
 ::-moz-selection {
   background: #222;
   color: #f7f7f7;
 }
-
 ::selection {
   background: #222;
   color: #f7f7f7;
