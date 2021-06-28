@@ -1,14 +1,7 @@
-$items: 1, 2, 3, 4, 5;
-
 .grid {
   display: grid;
   &.grid-2 {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px 30px;
-  }
-  @each $num in $items {
-    .grid-item-#{$num} {
-      grid-area: item-#{$num};
-    }
   }
 }

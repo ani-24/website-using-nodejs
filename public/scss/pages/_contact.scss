@@ -3,6 +3,7 @@
 .container {
   margin-top: 6rem;
   form {
+    text-align: center;
     .input-field {
       position: relative;
       min-height: 50px;
@@ -30,6 +31,36 @@
         height: 100%;
         width: 5px;
         background: $orange;
+      }
+    }
+    .submit {
+      position: relative;
+      background: $light;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      padding: 1em 1.5em;
+      margin-top: 30px;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: color 150ms ease-in-out;
+      z-index: 1;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: $orange;
+        z-index: -1;
+        transition: width 150ms ease-out;
+      }
+      &:hover {
+        color: $light;
+        &::before {
+          width: 100%;
+        }
       }
     }
   }

@@ -414,6 +414,9 @@ section .section-title {
 .container {
   margin-top: 6rem;
 }
+.container form {
+  text-align: center;
+}
 .container form .input-field {
   position: relative;
   min-height: 50px;
@@ -442,6 +445,38 @@ section .section-title {
   height: 100%;
   width: 5px;
   background: #fe7a6e;
+}
+.container form .submit {
+  position: relative;
+  background: #f7f7f7;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 1em 1.5em;
+  margin-top: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+  z-index: 1;
+}
+.container form .submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #fe7a6e;
+  z-index: -1;
+  -webkit-transition: width 150ms ease-out;
+  transition: width 150ms ease-out;
+}
+.container form .submit:hover {
+  color: #f7f7f7;
+}
+.container form .submit:hover::before {
+  width: 100%;
 }
 
 ::-moz-selection {
