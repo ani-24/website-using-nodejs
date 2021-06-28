@@ -1,35 +1,98 @@
 @use "./../variables/" as *;
 
+$items: 1, 2, 3, 4, 5;
+
 .container {
   margin-top: 6rem;
+  margin-bottom: 6rem;
   form {
-    .input-field {
+    text-align: center;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px 30px;
+      grid-template-areas: "item-1 item-2" "item-3 item-4" "item-5 item-5";
+      .input-field {
+        position: relative;
+        min-height: 50px;
+        width: 100%;
+        background: $light;
+        border-radius: 5px;
+        overflow: hidden;
+        .form-input {
+          height: 100%;
+          width: 100%;
+          border: none;
+          outline: none;
+          background: transparent;
+          padding: 25px;
+        }
+        &.textarea-field {
+          textarea {
+            width: 100%;
+            resize: vertical;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 5px;
+          background: $orange;
+        }
+      }
+      @each $num in items {
+        .grid-item-#{$num} {
+          grid-area: item-#{$num};
+        }
+      }
+    }
+    .submit {
       position: relative;
-      min-height: 50px;
-      width: 100%;
       background: $light;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      padding: 1em 1.5em;
+      margin-top: 30px;
       border-radius: 5px;
       overflow: hidden;
-      .form-input {
-        height: 100%;
-        width: 100%;
-        border: none;
-        outline: none;
-        background: transparent;
-        padding: 25px;
-      }
-      &.textarea-field {
-        grid-column-start: 1;
-        grid-column-end: 3;
-      }
+      transition: color 150ms ease-in-out;
+      z-index: 1;
       &::before {
         content: "";
         position: absolute;
-        left: 0;
         top: 0;
-        height: 100%;
+        left: 0;
         width: 5px;
+        height: 100%;
         background: $orange;
+        z-index: -1;
+        transition: width 150ms ease-out;
+      }
+      &:hover {
+        color: $light;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .container {
+    form {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+          "item-1"
+          "item-2"
+          "item-3"
+          "item-4"
+          "item-5";
       }
     }
   }

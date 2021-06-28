@@ -241,14 +241,6 @@ footer {
   margin-bottom: 30px;
 }
 
-.grid {
-  display: grid;
-}
-.grid.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px 30px;
-}
-
 .navbar {
   background: #f7f7f7;
 }
@@ -398,8 +390,18 @@ section .section-title {
 }
 .container {
   margin-top: 6rem;
+  margin-bottom: 6rem;
 }
-.container form .input-field {
+.container form {
+  text-align: center;
+}
+.container form .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px 30px;
+  grid-template-areas: "item-1 item-2" "item-3 item-4" "item-5 item-5";
+}
+.container form .grid .input-field {
   position: relative;
   min-height: 50px;
   width: 100%;
@@ -407,7 +409,7 @@ section .section-title {
   border-radius: 5px;
   overflow: hidden;
 }
-.container form .input-field .form-input {
+.container form .grid .input-field .form-input {
   height: 100%;
   width: 100%;
   border: none;
@@ -415,11 +417,11 @@ section .section-title {
   background: transparent;
   padding: 25px;
 }
-.container form .input-field.textarea-field {
-  grid-column-start: 1;
-  grid-column-end: 3;
+.container form .grid .input-field.textarea-field textarea {
+  width: 100%;
+  resize: vertical;
 }
-.container form .input-field::before {
+.container form .grid .input-field::before {
   content: "";
   position: absolute;
   left: 0;
@@ -428,12 +430,52 @@ section .section-title {
   width: 5px;
   background: #fe7a6e;
 }
+.container form .grid .grid-item-items {
+  grid-area: item-items;
+}
+.container form .submit {
+  position: relative;
+  background: #f7f7f7;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 1em 1.5em;
+  margin-top: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+  z-index: 1;
+}
+.container form .submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #fe7a6e;
+  z-index: -1;
+  -webkit-transition: width 150ms ease-out;
+  transition: width 150ms ease-out;
+}
+.container form .submit:hover {
+  color: #f7f7f7;
+}
+.container form .submit:hover::before {
+  width: 100%;
+}
 
+@media (max-width: 426px) {
+  .container form .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5";
+  }
+}
 ::-moz-selection {
   background: #222;
   color: #f7f7f7;
 }
-
 ::selection {
   background: #222;
   color: #f7f7f7;
