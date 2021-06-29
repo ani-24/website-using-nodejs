@@ -554,11 +554,25 @@ section .section-title {
   font-size: 1rem;
 }
 
+@media (max-width: 426px) {
+  .container .icon {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 375px) {
+  .container .icon {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 320px) {
+  .container .text {
+    font-size: 1.5rem;
+  }
+}
 ::-moz-selection {
   background: #fe7a6e;
   color: #f7f7f7;
 }
-
 ::selection {
   background: #fe7a6e;
   color: #f7f7f7;
