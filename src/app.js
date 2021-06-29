@@ -57,6 +57,10 @@ app.post("/contact", async (req, res) => {
   }
 });
 
+app.get("*", (req, res) => {
+  res.render("404page");
+});
+
 app.listen(port, () => {
   console.log(`Listening to port ${port}`);
 });

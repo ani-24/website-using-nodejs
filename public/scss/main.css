@@ -517,10 +517,48 @@ section .section-title {
     width: 100%;
   }
 }
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-text-decoration: center;
+          text-decoration: center;
+}
+.container .icon {
+  font-size: 10rem;
+  color: #555;
+}
+.container .text {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 2em;
+  -webkit-text-decoration: center;
+          text-decoration: center;
+}
+.container .link {
+  display: inline-block;
+  margin-top: 2em;
+  text-decoration: none;
+  color: #fe7a6e;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
 ::-moz-selection {
   background: #fe7a6e;
   color: #f7f7f7;
 }
+
 ::selection {
   background: #fe7a6e;
   color: #f7f7f7;
