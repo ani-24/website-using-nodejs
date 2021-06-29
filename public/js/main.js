@@ -1,5 +1,17 @@
 "use strict";
 
+// * navbar
+const navbar = document.querySelector(".navbar");
+const active = navbar.dataset.active;
+
+const links = navbar.querySelectorAll(".nav-link");
+
+links.forEach((link) => {
+  if (link.innerHTML.toLowerCase() === active) {
+    link.classList.add("active");
+  }
+});
+
 // * Sidebar
 const hamburger = document.querySelector(".hamburger_menu");
 const sidebar = document.querySelector(".sidebar");
@@ -66,3 +78,23 @@ if (courseContainer.classList.contains("featured")) {
     courseContainer.appendChild(card);
   });
 }
+
+// * Search courses
+
+const courseSearchbar = document.querySelector("#search-course");
+const courseSearchButton = document.querySelector("#search-course-btn");
+
+import { searchCourse as search } from "./search_course.js";
+
+courseSearchButton.addEventListener("click", () => {
+  // console.log(courseSearchbar.value);
+  console.log(search(courseSearchbar.value));
+  // console.log(filteredCourse);
+});
+
+courseSearchbar.addEventListener("keyup", (key) => {
+  if (key.keyCode === 13) {
+    let filteredCourse = search(courseSearchbar.value);
+    console.log(filteredCourse);
+  }
+});

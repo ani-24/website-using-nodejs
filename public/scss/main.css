@@ -60,6 +60,12 @@
 .navbar .nav-list.larger-device .nav-item .nav-link:hover::after {
   width: 110%;
 }
+.navbar .nav-list.larger-device .nav-item .nav-link.active {
+  color: #fe7a6e;
+}
+.navbar .nav-list.larger-device .nav-item .nav-link.active::after {
+  background: #fe7a6e;
+}
 .navbar .nav-list.sidebar {
   position: fixed;
   top: 0;
@@ -181,13 +187,14 @@
   padding: 1em;
 }
 .card .card-body .card-title {
-  font-family: "Big Shoulders Stencil Display", cursive;
-  font-weight: 800;
-  font-size: 2.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
   margin-bottom: 25px;
 }
 .card .card-body .card-text {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: #333;
   font-weight: 500;
   margin-bottom: 25px;
 }
@@ -398,8 +405,8 @@ section .section-title {
 .container form .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px 30px;
   grid-template-areas: "item-1 item-2" "item-3 item-4" "item-5 item-5";
+  grid-gap: 30px 30px;
 }
 .container form .grid .input-field {
   position: relative;
@@ -416,6 +423,9 @@ section .section-title {
   outline: none;
   background: transparent;
   padding: 25px;
+}
+.container form .grid .input-field.textarea-field {
+  grid-column: 1/3;
 }
 .container form .grid .input-field.textarea-field textarea {
   width: 100%;
@@ -470,6 +480,9 @@ section .section-title {
   .container form .grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5";
+  }
+  .container form .grid .input-field.textarea-field {
+    grid-column: 1/2;
   }
   .container .submit {
     position: relative;

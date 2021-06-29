@@ -5,6 +5,7 @@ const courseDet = [
     title: "Pure Vanilla JavaScript projects",
     text: "In this series, we will create real-world projects using pure vanilla javascript.",
     link: "#",
+    tag: "javascript",
     featured: true,
   },
 ];

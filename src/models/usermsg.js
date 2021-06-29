@@ -16,15 +16,20 @@ const msgSchema = mongoose.Schema({
     min: 6,
   },
   email: {
-    validator(val) {
+    type: String,
+    required: true,
+    validate(val) {
       if (!validator.isEmail(val)) {
         throw new Error("Invalid email");
       }
     },
   },
-  msg: {
+  message: {
     type: String,
     required: true,
     minlength: 3,
   },
 });
+
+const Message = mongoose.model("Message", msgSchema);
+module.exports = Message;
