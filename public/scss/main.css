@@ -518,11 +518,11 @@ section .section-title {
   }
 }
 ::-moz-selection {
-  background: #222;
+  background: #fe7a6e;
   color: #f7f7f7;
 }
 ::selection {
-  background: #222;
+  background: #fe7a6e;
   color: #f7f7f7;
 }
 
