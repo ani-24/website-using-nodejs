@@ -3,9 +3,9 @@
 $items: 1, 2, 3, 4, 5;
 
 .container {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin: 6rem 0;
   form {
+    width: 80%;
     text-align: center;
     .grid {
       display: grid;

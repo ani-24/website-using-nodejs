@@ -396,10 +396,10 @@ section .section-title {
   }
 }
 .container {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin: 6rem 0;
 }
 .container form {
+  width: 80%;
   text-align: center;
 }
 .container form .grid {
