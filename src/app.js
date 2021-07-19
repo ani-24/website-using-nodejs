@@ -16,6 +16,10 @@ const port = process.env.PORT || 3000;
 // Setting up paths
 const pubPath = path.join(__dirname, "../public");
 const viewPath = path.join(__dirname, "../templates/views");
+const courseOverviewPath = path.join(
+  __dirname,
+  "../templates/views/course/course_overview/"
+);
 const partialsPath = path.join(__dirname, "../templates/partials");
 
 // middlewares
@@ -24,7 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(pubPath));
 app.set("view engine", "hbs");
-app.set("views", viewPath);
+app.set("views", [viewPath, courseOverviewPath]);
 hbs.registerPartials(partialsPath);
 
 app.get("/", (req, res) => {
